@@ -1,9 +1,12 @@
 import React from "react";
-
+import "./Home.scss";
 const Home = () => {
   return (
-    <div>
-      <h1> my name is home page...</h1>
+    <div className="home">
+      <div className="home-search">
+        <input type="text" />
+        <button>Search</button>
+      </div>
     </div>
   );
 };

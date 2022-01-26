@@ -1,17 +1,23 @@
-import "./App.css";
+import React from "react";
 import Home from "./Components/HomePage/Home";
-
+import Navbars from "./Components/NavbarPage/Navbars";
+import Footer from "./Components/FooterPage/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Categories from "./Components/CatagorisPage/Categories";
+import Random from "./Components/RandomPage/Random";
 function App() {
   return (
     <div className="App">
-      <h1> this is test webside..</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est odit
-        blanditiis ratione, voluptate nemo error. Quam nobis commodi, tenetur
-        exercitationem quae maiores odit omnis illum fuga, nisi quia eius
-        explicabo.
-      </p>
-      <Home></Home>
+      <BrowserRouter>
+        <Navbars></Navbars>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/home" element={<Home></Home>}></Route>
+          <Route path="/categories" element={<Categories></Categories>}></Route>
+          <Route path="/random" element={<Random></Random>}></Route>
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
     </div>
   );
 }
