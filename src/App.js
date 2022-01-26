@@ -1,4 +1,5 @@
 import "./App.css";
+import Home from "./Components/HomePage/Home";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         exercitationem quae maiores odit omnis illum fuga, nisi quia eius
         explicabo.
       </p>
+      <Home></Home>
     </div>
   );
 }
