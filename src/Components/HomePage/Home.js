@@ -41,7 +41,7 @@ const Home = () => {
             <SpinnerDotted enabled={spiner} />
           </div>
         ) : (
-          <h1>No Meals. Please Enter Foot Name... </h1>
+          <h1>No Meals. Please Enter Foot Name.... </h1>
         )}
       </div>
     </div>
