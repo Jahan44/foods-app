@@ -1,13 +1,17 @@
 import React, { useCallback, useContext, useState } from "react";
 import { Mycontex } from "../ContextHooks/Context";
+import { SpinnerDotted } from "spinners-react";
 import "./Home.scss";
 const Home = () => {
   const [search, setSearch] = useState("");
+  const [spiner, setSpiner] = useState(false);
   const { fetchHomeMeals, meals } = useContext(Mycontex);
   const SearchbtnHandle = useCallback(() => {
+    setSpiner(!spiner);
     fetchHomeMeals(search);
+    // setSpiner(false);
   }, [search, fetchHomeMeals]);
-  console.log(meals[1]);
+
   return (
     <div className="home">
       <div className="home-search">
@@ -31,6 +35,11 @@ const Home = () => {
               </div>
             );
           })
+        ) : spiner ? (
+          <div className="spiner-body">
+            {" "}
+            <SpinnerDotted enabled={spiner} />
+          </div>
         ) : (
           <h1>no meals </h1>
         )}
