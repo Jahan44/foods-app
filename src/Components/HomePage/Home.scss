@@ -39,6 +39,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .card-body {
   width: 250px;
@@ -58,9 +60,22 @@
 }
 .card {
   width: auto;
+  padding: 10px;
   img {
     width: 180px;
     border-radius: 10px;
+  }
+  a {
+    background-color: darkcyan;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #fff;
+  }
+  a:hover {
+    color: darkcyan;
+    background-color: #fff;
   }
 }
 .spiner-body {
@@ -74,5 +89,8 @@
 @media screen and (max-width: 530) {
   .card-body {
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

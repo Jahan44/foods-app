@@ -1,7 +1,9 @@
 import React, { useCallback, useContext, useState } from "react";
 import { Mycontex } from "../ContextHooks/Context";
 import { SpinnerDotted } from "spinners-react";
+import { Link } from "react-router-dom";
 import "./Home.scss";
+
 const Home = () => {
   const [search, setSearch] = useState("");
   const [spiner, setSpiner] = useState(false);
@@ -27,10 +29,11 @@ const Home = () => {
         {meals?.length > 0 ? (
           meals?.map((meal) => {
             return (
-              <div className="card-body">
-                <div className="card" key={meals.idMeal}>
+              <div className="card-body" key={meal.idMeal}>
+                <div className="card">
                   <img src={meal?.strMealThumb} alt="" />
                   <h2>Name:{meal?.strMeal}</h2>
+                  <Link to={`home/${meal.idMeal}`}>Details</Link>
                 </div>
               </div>
             );
