@@ -15,8 +15,8 @@ const Navbars = () => {
             <Link to="/home">
               <li>Home</li>
             </Link>
-            <Link to="/categories">
-              <li>Categories</li>
+            <Link to="/animation">
+              <li>Animation</li>
             </Link>
             <Link to="/random">
               <li>Random</li>

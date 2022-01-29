@@ -7,22 +7,32 @@ import "./Home.scss";
 const Home = () => {
   const [search, setSearch] = useState("");
   const [spiner, setSpiner] = useState(false);
+
   const { fetchHomeMeals, meals } = useContext(Mycontex);
+
   const SearchbtnHandle = useCallback(() => {
-    setSpiner(!spiner);
+    setSpiner(true);
     fetchHomeMeals(search);
     // setSpiner(false);
+    setSearch("");
   }, [search, fetchHomeMeals]);
+
+  // const test = (e) => {
+  //   console.log(e.code, e.target.value);
+  // };
 
   return (
     <div className="home">
       <div className="home-search">
         <input
+          id="search"
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button onClick={SearchbtnHandle}>Search</button>
+        <button onClick={SearchbtnHandle} id="myBtn">
+          Search
+        </button>
       </div>
 
       <div className="card-home">
