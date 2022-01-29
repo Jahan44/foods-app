@@ -49,7 +49,9 @@ const AnimationTow = () => {
   }
   return (
     <section>
-      <h2>Bristi..VS..Sumi</h2>
+      <h2>
+        Bristi..<span className="vs-color">&#8523;</span>..Sumi
+      </h2>
       <div className="banner">
         {elements.map((ele) => {
           return (
