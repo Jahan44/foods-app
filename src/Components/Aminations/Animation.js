@@ -35,7 +35,9 @@ const AnimationOne = () => {
                 animationDelay: `${elements[ele] * 0.05}s`,
               }}
               key={ele}
-            ></div>
+            >
+              <div className="image-file"></div>
+            </div>
           );
         })}
       </div>
